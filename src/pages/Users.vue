@@ -280,7 +280,7 @@ const users = [
             <span class="head"> Счет </span>
             <span class="head"> Тип счета </span>
             <span class="head"> Баланс/Средства </span>
-            <span class="head">
+            <span class="head head-row">
               <svg
                 width="17"
                 height="16"
@@ -504,10 +504,15 @@ const users = [
       background: #fafafa;
       grid-template-columns: 125px 130px 185px 165px 245px 185px;
       padding: 8px;
+      align-items: center;
       span {
         font-size: 10px;
         line-height: 10px;
         text-align: left;
+      }
+      .head-row {
+        display: flex;
+        align-items: center;
       }
     }
   }
