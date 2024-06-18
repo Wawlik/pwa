@@ -2,23 +2,18 @@
 import BodyTab from "@/components/parts/BodyTab.vue";
 import Main from "../components/parts/Main.vue";
 import Search from "../components/parts/Search/Search.vue";
-import LabelWrapped from "../components/parts/LabelWrapped.vue";
 const bodyTabs = [
   {
-    label: "О пользователе",
-    link: "/users/user",
+    label: "Статистика",
+    link: "/users/statistics",
   },
   {
-    label: "Финансы",
-    link: "/users/user/finance",
+    label: "Пользователи ТТ",
+    link: "/users/usersTT",
   },
   {
-    label: "Сделки",
-    link: "/users/deals",
-  },
-  {
-    label: "Детализация SF",
-    link: "/users/user/details",
+    label: "История",
+    link: "/users/history",
   },
 ];
 const users = [
@@ -414,11 +409,6 @@ const users = [
             </div>
           </div>
         </div>
-        <div class="main__info">
-          <LabelWrapped :label="'Пользователей'" :content="'1 245'"/>
-          <LabelWrapped :label="'Общий баланс/средства'" :content="'$1 547 852.54 / $25 478.54'" :contentClass="'moneystat'"/>
-          <LabelWrapped :label="'Оборот'" :content="'$555 478.54'" :contentClass="'moneystat'"/>
-        </div>
       </div>
     </template>
   </Main>
@@ -440,6 +430,7 @@ const users = [
     box-shadow: 0px -1px 0px 0px #0000000d inset;
     background-color: #fafafa;
     border-radius: 6px 6px 0px 0px;
+    justify-content: space-between;
   }
   &__search {
     &-wrapper {
@@ -451,11 +442,8 @@ const users = [
   }
   &__table {
     &-wrapper {
-      height: calc(100% - 44px - 40px - 55px - 12px);
+      height: calc(100% - 44px - 40px);
       overflow: hidden;
-      border: 1px solid #F0F0F0;
-      border-radius: 4px;
-      margin: 4px;
     }
     &_body {
       overflow-y: auto;
@@ -513,10 +501,6 @@ const users = [
             line-height: 12px;
           }
         }
-        &:last-child {
-        box-shadow: none;
-
-        }
       }
     }
     &_head {
@@ -535,11 +519,6 @@ const users = [
         align-items: center;
       }
     }
-  }
-  &__info {
-    display: flex;
-    padding: 8px 4px;
-    justify-content: space-around;
   }
 }
 </style>

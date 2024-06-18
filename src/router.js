@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 import HomeView from './pages/Home.vue'
 import UsersView from './pages/Users.vue'
+import UserDetailedView from './pages/Users.vue'
+
 // import AboutView from './pages/About.vue'
 // import DocumentsView from './pages/Documents.vue'
 // import ServiceView from './pages/Service.vue'
@@ -9,10 +11,17 @@ import UsersView from './pages/Users.vue'
 
 export const routes = [
     { path: '/', name: 'Home', component: HomeView },
+
     { path: '/users', name: 'Users', component: UsersView },
     { path: '/users/usersTT', name: 'Users-users', component: UsersView },
     { path: '/users/history', name: 'Users-history', component: UsersView },
     { path: '/users/statistics', name: 'Users-statistics', component: UsersView },
+
+    { path: '/users/user', name: 'Users-user', component: UserDetailedView },
+    { path: '/users/user/finance', name: 'Users-user', component: UserDetailedView },
+    { path: '/users/user/deals', name: 'Users-user', component: UserDetailedView },
+    { path: '/users/user/details', name: 'Users-user', component: UserDetailedView },
+
     // { path: '/documents', name: 'Documents', component: DocumentsView },
     // { path: '/about', name: 'About', component: AboutView },
     // { path: '/partner', name: 'Partner', component: PartnerView },
