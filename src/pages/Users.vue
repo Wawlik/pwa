@@ -2,23 +2,19 @@
 import BodyTab from "@/components/parts/BodyTab.vue";
 import Main from "../components/parts/Main.vue";
 import Search from "../components/parts/Search/Search.vue";
-import LabelWrapped from "../components/parts/LabelWrapped.vue";
+import LabelWrapped from "../components/parts/LabelWrappedAbsolute.vue";
 const bodyTabs = [
   {
-    label: "О пользователе",
-    link: "/users/user",
+    label: "Статистика",
+    link: "/users/statistics",
   },
   {
-    label: "Финансы",
-    link: "/users/user/finance",
+    label: "Пользователи ТТ",
+    link: "/users/usersTT",
   },
   {
-    label: "Сделки",
-    link: "/users/deals",
-  },
-  {
-    label: "Детализация SF",
-    link: "/users/user/details",
+    label: "История",
+    link: "/users/history",
   },
 ];
 const users = [
@@ -281,7 +277,7 @@ const users = [
         <div class="main__search-wrapper">
           <Search></Search>
         </div>
-        <div class="main__table-wrapper">
+        <div class="main__visibleArea">
           <div class="main__table_head">
             <span class="head"> Регистрация </span>
             <span class="head"> Пользователь </span>
@@ -322,6 +318,7 @@ const users = [
               class="main__table_body-row"
               v-for="user in users"
               :key="'user-' + user.name"
+              @click="$router.push('/users/user')"
             >
               <div class="field field-row">
                 <span class="time">
@@ -449,14 +446,12 @@ const users = [
       padding: 4px 0;
     }
   }
+  &__visibleArea {
+    border: 1px solid #F0F0F0;
+    border-radius: 4px;
+    margin: 4px;
+  }
   &__table {
-    &-wrapper {
-      height: calc(100% - 44px - 40px - 55px - 12px);
-      overflow: hidden;
-      border: 1px solid #F0F0F0;
-      border-radius: 4px;
-      margin: 4px;
-    }
     &_body {
       overflow-y: auto;
       overflow-x: hidden;
@@ -466,7 +461,7 @@ const users = [
         grid-template-columns: 125px 130px 185px 165px 245px 185px;
         padding: 8px 11px;
         box-shadow: 0px -1px 0px 0px #0000000d inset;
-
+        cursor: pointer;
         .field {
           display: flex;
           align-items: center;

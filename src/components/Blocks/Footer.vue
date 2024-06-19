@@ -153,7 +153,7 @@
     flex-flow: column nowrap;
     text-align: left;
     .heading {
-      font-family: Montserrat;
+      font-family: Arial;
       font-size: 22px;
       font-weight: 700;
       line-height: 26.4px;
@@ -161,7 +161,7 @@
       color: #fff;
     }
     li {
-      font-family: Montserrat;
+      font-family: Arial;
       font-size: 18px;
       font-weight: 500;
       line-height: 21.6px;

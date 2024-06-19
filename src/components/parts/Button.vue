@@ -28,7 +28,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 21.6px;
-    font-family: Montserrat;
+    font-family: Arial;
     &.blue {
         background-color: #00B9FC;
     }
