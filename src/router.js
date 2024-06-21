@@ -10,9 +10,11 @@ import UserDetailedView from './pages/Users-user.vue'
 // import PartnerView from './pages/Partner.vue'
 
 export const routes = [
-    { path: '/', name: 'Home', component: HomeView },
+    { path: '', name: 'Home', component: HomeView },
+    { path: '/', name: 'Home-2', component: HomeView }, //////rework
 
     { path: '/users', name: 'Users', component: UsersView },
+    { path: '/users/', name: 'Users-2', component: UsersView }, //////rework
     { path: '/users/usersTT', name: 'Users-usersTT', component: UsersView },
     { path: '/users/history', name: 'Users-history', component: UsersView },
     { path: '/users/statistics', name: 'Users-statistics', component: UsersView },
@@ -32,6 +34,7 @@ export const routerHistory = createWebHistory()
 export const router = createRouter({
     routes: routes,
     history: routerHistory,
+      strict: true,
     scrollBehavior() {
         // always scroll to top
         return {
@@ -222,12 +225,12 @@ export const router = createRouter({
 // const delay = (t: number) => new Promise(resolve => setTimeout(resolve, t))
 
 // // remove trailing slashes
-// router.beforeEach(to => {
-//   if (/.\/$/.test(to.path)) {
-//     to.meta.redirectCode = 301
-//     return to.path.replace(/\/$/, '')
-//   }
-// })
+router.beforeEach(to => {
+  if (/.\/$/.test(to.path)) {
+    to.meta.redirectCode = 301
+    return to.path.replace(/\/$/, '')
+  }
+})
 
 // router.beforeEach(async to => {
 //   // console.log(`Guard from ${from.fullPath} to ${to.fullPath}`)

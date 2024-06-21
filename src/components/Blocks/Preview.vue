@@ -4,14 +4,14 @@
 // import Logo from "../parts/Logo.vue";
 
 // import previewGraphics from "@/assets/img/preview-graphics.png";
-
+import AuthForm from '../Auth/Form.vue';
 function goToTT() {
   window.open("https://toptrader.org", "_blank");
 }
 </script>
 
 <template>
-  preview
+  <AuthForm></AuthForm>
   <!-- <Section class="section">
     <template v-slot:content>
       <div class="article__wrapper">

@@ -1,6 +1,6 @@
 
 <script setup>
-import Header from "../components/Blocks/Header.vue";
+// import Header from "../components/Blocks/Header.vue";
 
 import Preview from "@/components/Blocks/Preview.vue";
 

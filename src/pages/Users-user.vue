@@ -11,6 +11,10 @@ import LabelWrappedTemplate from "../components/parts/LabelWrappedTemplate.vue";
 import Avatar from "../components/parts/Avatar.vue";
 const bodyTabs = [
   {
+    label: "Back",
+    link: "/users",
+  },
+  {
     label: "О пользователе",
     link: "/users/user",
   },
